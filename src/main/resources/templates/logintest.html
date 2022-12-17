@@ -1,0 +1,20 @@
+<html>
+    <head> Login page</head>
+
+    <body>
+
+        <form th:action="@{/logintest}" th:object="${Users}"
+        method="post">
+          <!-- name input -->
+          <input type="text" id="form3Example3" name="username" class="form-control form-control-lg"
+              placeholder="Username" />
+          <!-- Password input -->
+            <input type="text" id="form3Example4" name="password" class="form-control form-control-lg"
+              placeholder="Password" />
+
+            <button type="submit" class="btn btn-primary btn-lg" value="Log in"
+              style="padding-left: 2.5rem; padding-right: 2.5rem">Login</button>
+        </form>
+        
+    </body>
+</html>

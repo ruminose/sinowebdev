@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout/main_layout">
+<head>
+<meta charset="UTF-8">
+<title>Add Customer</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="row">
+			<div class="col-md-6 text-center">
+				<h1 class="h3 mb-2 text-gray-800 mb-4">Add new Customer</h1>
+			</div>
+			<div class="col-md-6 text-right">
+				<a href="/Customer" class="btn btn-info"><i
+					class="fas fa-chevron-left"></i> Back</a>
+			</div>
+		</div>
+		<form action="#" th:action="@{/savecustomer}" method="post" th:object="${customer}">
+
+			<div class="form-group row text-center">
+				<label for="Name" class="col-sm-2 col-form-label">
+					Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="Name" th:field="*{Name}">
+				</div>
+			</div>
+
+			<div class="form-group row text-center">
+				<label for="Surname" class="col-sm-2 col-form-label">
+                    Surname</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="Surname" th:field="*{surname}">
+				</div>
+			</div>
+			<div class="text-center">
+				<label for="status">Status			
+					<select class="form-control col-sm-100 text-center" th:field="*{status}">
+						<option value="">Select status</option>
+						<option th:each="status: ${status}" th:value="${status}" th:text="${status}"></option>
+					</select>
+					<br>
+					<label for="country" class="col-sm-100 col-form-label">&nbsp;</label>
+					<input type="submit" value="Add" class="btn btn-primary" />
+				</label>
+			</div>
+	</body>
+		</form>
+		
+</html>

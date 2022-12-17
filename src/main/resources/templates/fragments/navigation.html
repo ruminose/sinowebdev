@@ -1,0 +1,36 @@
+<div th:fragment="navigation">
+    <ul class="nav nav-pills nav-fill navbar navbar-dark bg-dark">
+      <li class="nav-item">
+        <a class="nav-link" href="/User">Home</a>
+      </li>
+      <li class="nav-item">
+                <a class="nav-link" href="/products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/User">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Customer">Customers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/order">Order</a>
+      </li>
+    </ul>
+  <script>
+    // const ul = document.querySelector('ul');
+
+    // ul.addEventListener('click', e => {
+    //   e.preventDefault();
+    //   let li = e.target.closest('li');
+    //   if (li) {
+    //     ul.querySelectorAll('li').forEach(elm => elm.classList.remove('active'));
+    //     li.classList.add('active');
+    //   }
+    // });
+  </script>
+  <style>
+    li.active a {
+      color: white;
+    }
+  </style>
+</div>
