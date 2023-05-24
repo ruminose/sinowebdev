@@ -1,0 +1,7 @@
+<h1>Search Results</h1>
+<ul>
+  <li th:each="result : ${results}">
+    <p th:text="${result.id}"></p>
+    <p th:text="${result.name}"></p>
+  </li>
+</ul>

@@ -19,7 +19,6 @@ public class CustomerService {
     public List<Customer> findAll() {
         return CustomerRepository.findAll(Sort.by("id").ascending());
     }
-
     //Get user by id
     public Customer findbyid(Integer id){
         return CustomerRepository.getOne(id);

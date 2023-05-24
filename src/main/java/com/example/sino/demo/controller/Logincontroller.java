@@ -45,7 +45,7 @@ public class Logincontroller {
             return new ModelAndView("User","list",list);
             
         }else{
-            return new ModelAndView ("error");
+            return new ModelAndView ("User");
         }
     }
 }
